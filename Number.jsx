@@ -3,7 +3,7 @@ import { createStore } from "redux";
 
 class Number extends Component {
   render() {
-    const counter = (state = 7, action) => {
+    const number = (state = 7, action) => {
       switch (action.type) {
         case "Add":
           return state + 1;
@@ -14,7 +14,7 @@ class Number extends Component {
       }
     };
 
-    let store = createStore(counter);
+    let store = createStore(number);
 
     // store.subscribe(() => console.log(store.getState()));
     store.subscribe(() => console.log("Number is", store.getState()));
